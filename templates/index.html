@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url_for('static', filename='img/icontab.png') }}" type="image/png">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Translate</title>
+    <link rel="icon" href="/img/icontab.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Translate - Nguyễn Thị Tú Quyên</title>
 </head>
+
 <body>
-    <h1></h1>
     <div id="bothtext">
+        <div class="language-header">
+            <select id="sourceLang">
+                <option value="">Tự động phát hiện</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="en">Tiếng Anh</option>
+                <option value="id">Tiếng Indonesia</option>
+                <option value="ja">Tiếng Nhật</option>
+                <option value="ko">Tiếng Hàn</option>
+                <option value="zh">Tiếng Trung</option>
+                <option value="fr">Tiếng Pháp</option>
+                <option value="th">Tiếng Thái</option>
+            </select>
+            <span style="color: white; margin: 0 15px;"> ➔ </span>
+            <select id="targetLang">
+                <option value="vi">Tiếng Việt</option>
+                <option value="en" selected>Tiếng Anh</option>
+                <option value="id">Tiếng Indonesia</option>
+                <option value="ja">Tiếng Nhật</option>
+                <option value="ko">Tiếng Hàn</option>
+                <option value="zh">Tiếng Trung</option>
+                <option value="fr">Tiếng Pháp</option>
+                <option value="th">Tiếng Thái</option>
+            </select>
+        </div>
+
         <div class="column">
             <h2>Nhập văn bản cần dịch :</h2>
-            <textarea id="inputText" class="input" rows="5" cols="50"></textarea>
-            <br>
-            <button class="buttontrans" onclick="handleTranslate()">Dịch</button>    
-            <button class="buttontrans" onclick="handleSpeak()">🔊 Đọc</button>
+            <textarea id="inputText" placeholder="Quyên ơi, nhập gì đó đi..."></textarea>
+            <div class="button-group">
+                <button class="buttontrans" onclick="handleTranslate()">Dịch</button>
+                <button class="buttontrans" onclick="handleSpeak()">🔊 Đọc kết quả</button>
+            </div>
         </div>
 
         <div class="column" id="column-right">
             <h2>Kết quả sau khi dịch :</h2>
-            <textarea id="outputText" class="output" rows="5" cols="50" readonly></textarea>
+            <textarea id="outputText" readonly placeholder="Kết quả sẽ hiện ở đây..."></textarea>
         </div>
+    </div>
+
+    <div id="history-section">
+        <h2 style="text-align: center;">📜 Lịch sử dịch gần đây</h2>
+        <div id="history-list"></div>
     </div>
 
     <footer>
         <p>Thanks & See ya! </p>
         <p>
-            <span class="cherry">🌸</span> @DC21V7N556 - Nguyen Thi Tu Quyen <span class="cherry">🌸</span>
-        </p>    
+            <span class="cherry">🌸</span> @DC21V7N556 - Nguyễn Thị Tú Quyên <span class="cherry">🌸</span>
+        </p>
     </footer>
 
-    <!-- Nạp script.js sau cùng -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="/js/script.js"></script>
 </body>
+
 </html>

@@ -8,12 +8,12 @@ body {
 
 
 #bothtext {
-    width: 90%; /* ✅ Co giãn theo màn hình */
+    width: 90%; 
     max-width: 2000px;
-    min-height: auto; /* ✅ Không ép chiều cao */
+    min-height: auto; 
     display: flex;
-    flex-direction: row; /* ✅ Sắp xếp ngang */
-    align-items: flex-start; /*cho dính lên trên hết - theo chiều dọc (trục phụ), vì flex (trục chính) đang là row (chiều ngang- hàng ngang)*/
+    flex-direction: row; 
+    align-items: flex-start; 
     justify-content: center;
     gap: 100px;
     padding: 3%;
@@ -36,8 +36,8 @@ h2 {
 }
 
 textarea {
-    width: 90%; /* ✅ Không quá to */
-    min-height: 150px; /* ✅ Đủ lớn để nhập text */
+    width: 90%; 
+    min-height: 150px; 
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -63,8 +63,8 @@ footer {
 }
 
 .cherry {
-    display: inline-block; /* Giúp icon xoay đúng */
-    animation: spin 2s linear infinite; /* Xoay 2 giây/lượt, lặp vô hạn */
+    display: inline-block;
+    animation: spin 2s linear infinite;
 }
 
 button {
