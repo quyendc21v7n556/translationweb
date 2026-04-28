@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='img/icontab.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Translate</title>
+</head>
+<body>
+    <h1></h1>
+    <div id="bothtext">
+        <div class="column">
+            <h2>Nhập văn bản cần dịch :</h2>
+            <textarea id="inputText" class="input" rows="5" cols="50"></textarea>
+            <br>
+            <button class="buttontrans" onclick="handleTranslate()">Dịch</button>    
+            <button class="buttontrans" onclick="handleSpeak()">🔊 Đọc</button>
+        </div>
+
+        <div class="column" id="column-right">
+            <h2>Kết quả sau khi dịch :</h2>
+            <textarea id="outputText" class="output" rows="5" cols="50" readonly></textarea>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thanks & See ya! </p>
+        <p>
+            <span class="cherry">🌸</span> @DC21V7N556 - Nguyen Thi Tu Quyen <span class="cherry">🌸</span>
+        </p>    
+    </footer>
+
+    <!-- Nạp script.js sau cùng -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
