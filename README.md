@@ -22,9 +22,8 @@
 
 ### 🛠 Công nghệ sử dụng
 
-- **Frontend:** HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6).
 - **Backend:** Node.js, Express.
-- **Database:** MongoDB
+- **Database:** MongoDB (Sử dụng Mongoose ODM).
 - **API Dịch:** MyMemory Translated API.
 - **Giọng đọc:** Web Speech API.
 
@@ -34,6 +33,6 @@
 
 1. **Clone project:**
    ```bash
-   git clone [https://github.com/TenCuaQuyen/translator-web.git](https://github.com/TenCuaQuyen/translator-web.git)
+   git clone https://github.com/quyendc21v7n556/translationweb
    cd translator-web
    ```
